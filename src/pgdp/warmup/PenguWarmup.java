@@ -10,7 +10,7 @@ public class PenguWarmup {
 		// Here is a place for you to play around :)
 
 		//penguInfoOut(6);
-		System.out.println(penguEvolution(128, 2));
+		System.out.println(penguEvolution(9, 9));
 	}
 
 	protected PenguWarmup() {
@@ -32,41 +32,41 @@ public class PenguWarmup {
 		}
 
 	}
-	public static boolean isPowerOfTwo(int n){
-		while(n%2 == 0){
-			n /= 2;
-		}
-		if(n == 1){
-			return true;
-		}
-		return false;
-	}
 
-	public static boolean isPowerOfSeven(int n){
-		while(n%7 == 0){
-			n /= 7;
-		}
-		if(n == 1){
-			return true;
-		}
-		return false;
-	}
 	public static int penguEvolution(int penguin, int years) {
-		//for number of years
-		for (int i = 0; i < years; i++) {
-			if (penguin % 2 == 0 && isPowerOfTwo(penguin)) {
-				penguin = 1;
-			} else if (penguin % 2 == 0) {
-				penguin = penguin / 2;
-			} else if (penguin % 2 != 0 && isPowerOfSeven(penguin)) {
-				penguin = 7;
-			} else {
-				penguin = (penguin * 3) + 1;
+		// TODO
+		int n;
+		for (n=0;n < years;n++){
+			int k;
+			int x = 1;
+			for (k=0;x < penguin;k++) {
+				x = 2 * x;
+			}
+			if (penguin <= 0) {
+				System.out.println("Penguin " + penguin + " is not a known penguin!");
+			}
+			else if (penguin % 2 == 0) {//Mann
+				if (penguin == x) {
+						penguin = 1;
+						 //Wenn Male Penguin Zahl gleich einer Zweierpotenz dann 1.
+					}
+				else {
+						penguin = penguin / 2;
+						//Ansonsten wird Male Penguin Zahl halbiert.
+					}
+				}
+			else if (penguin % 7 == 0) {
+				years += 7;
+			}
+			else {
+				penguin = penguin * 3 + 1;
 			}
 
 		}
 		return penguin;
 	}
+
+
 
 	public static int penguSum(int penguin) {
 		// TODO
