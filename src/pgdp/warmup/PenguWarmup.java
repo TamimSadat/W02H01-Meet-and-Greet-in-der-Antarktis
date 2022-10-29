@@ -9,9 +9,10 @@ public class PenguWarmup {
 
 		// Here is a place for you to play around :)
 
-		penguInfoOut(6);
-		System.out.println(penguEvolution(9, 10));
-		System.out.println(penguPowers(1337,2));
+		//penguInfoOut(6);
+		//System.out.println(penguEvolution(9, 10));
+		//System.out.println(penguPowers(23,5));
+		System.out.println(penguSum(128));
 	}
 
 	protected PenguWarmup() {
@@ -77,7 +78,12 @@ public class PenguWarmup {
 
 	public static int penguSum(int penguin) {
 		// TODO
-		return 0;
+		int x = 0; //x stellt die Summe dar.
+		while (penguin != 0) {
+			x += penguin % 10;
+			penguin /= 10;
+		}
+		return x;
 	}
 
 	public static long penguPermutation(long n, long k) {
