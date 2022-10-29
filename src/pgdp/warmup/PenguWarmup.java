@@ -9,8 +9,8 @@ public class PenguWarmup {
 
 		// Here is a place for you to play around :)
 
-		penguInfoOut(6);
-		System.out.println(penguEvolution(1337, 5));
+		//penguInfoOut(6);
+		System.out.println(penguEvolution(128, 2));
 	}
 
 	protected PenguWarmup() {
@@ -32,10 +32,40 @@ public class PenguWarmup {
 		}
 
 	}
+	public static boolean isPowerOfTwo(int n){
+		while(n%2 == 0){
+			n /= 2;
+		}
+		if(n == 1){
+			return true;
+		}
+		return false;
+	}
 
+	public static boolean isPowerOfSeven(int n){
+		while(n%7 == 0){
+			n /= 7;
+		}
+		if(n == 1){
+			return true;
+		}
+		return false;
+	}
 	public static int penguEvolution(int penguin, int years) {
-		// TODO
-		return 0;
+		//for number of years
+		for (int i = 0; i < years; i++) {
+			if (penguin % 2 == 0 && isPowerOfTwo(penguin)) {
+				penguin = 1;
+			} else if (penguin % 2 == 0) {
+				penguin = penguin / 2;
+			} else if (penguin % 2 != 0 && isPowerOfSeven(penguin)) {
+				penguin = 7;
+			} else {
+				penguin = (penguin * 3) + 1;
+			}
+
+		}
+		return penguin;
 	}
 
 	public static int penguSum(int penguin) {
