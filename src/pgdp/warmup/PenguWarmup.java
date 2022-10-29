@@ -11,7 +11,7 @@ public class PenguWarmup {
 
 		//penguInfoOut(6);
 		//System.out.println(penguEvolution(9, 10));
-		System.out.println(penguPowers(4,2));
+		System.out.println(penguPowers(2,1));
 	}
 
 	protected PenguWarmup() {
@@ -87,6 +87,10 @@ public class PenguWarmup {
 
 	public static long penguPowers(int x, int i) {
 		// TODO
+		if (i == 0) {
+			return 1;
+		}
+		else {
 		int base = x;
 		int power = i;
 		for (int n = 1; n < power; n++) {
@@ -96,6 +100,7 @@ public class PenguWarmup {
 			}
 		}
 		return x;
+	}
 	}
 
 
