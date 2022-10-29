@@ -9,8 +9,8 @@ public class PenguWarmup {
 
 		// Here is a place for you to play around :)
 
-		//penguInfoOut(6);
-		//System.out.println(penguEvolution(9, 10));
+		penguInfoOut(6);
+		System.out.println(penguEvolution(9, 10));
 		System.out.println(penguPowers(1337,2));
 	}
 
