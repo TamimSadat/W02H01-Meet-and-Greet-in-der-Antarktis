@@ -10,7 +10,7 @@ public class PenguWarmup {
 		// Here is a place for you to play around :)
 
 		//penguInfoOut(6);
-		System.out.println(penguEvolution(9, 9));
+		System.out.println(penguEvolution(9, 10));
 	}
 
 	protected PenguWarmup() {
@@ -37,6 +37,7 @@ public class PenguWarmup {
 		// TODO
 		int n;
 		for (n=0;n < years;n++){
+			int q = 0;
 			int k;
 			int x = 1;
 			for (k=0;x < penguin;k++) {
@@ -49,18 +50,24 @@ public class PenguWarmup {
 				if (penguin == x) {
 						penguin = 1;
 						 //Wenn Male Penguin Zahl gleich einer Zweierpotenz dann 1.
-					}
+					q++;}
 				else {
 						penguin = penguin / 2;
 						//Ansonsten wird Male Penguin Zahl halbiert.
-					}
+					q++;}
 				}
 			else if (penguin % 7 == 0) {
-				years += 7;
+				n += 6;
+				if (n<years) {
+					penguin = penguin * 3 + 1;
+				}
+				else {
+					return penguin;
+				}
 			}
 			else {
 				penguin = penguin * 3 + 1;
-			}
+			q++;}
 
 		}
 		return penguin;
