@@ -11,9 +11,9 @@ public class PenguWarmup {
 
 		//penguInfoOut(6);
 		//System.out.println(penguEvolution(9, 10));
-		//System.out.println(penguPowers(23,5));
+		System.out.println(penguPowers(0,1));
 		//System.out.println(penguSum(128));
-		System.out.println(penguPermutation(6,3));
+		//System.out.println(penguPermutation(6,3));
 	}
 
 	protected PenguWarmup() {
@@ -89,8 +89,8 @@ public class PenguWarmup {
 
 	public static long penguPermutation(long n, long k) {
 		// TODO
-		if (n >= 21 && k >= 21) {
-			return 0;
+		if (n >= 21) {
+			long a = n;
 		}
 		else {
 			long x = 1;
@@ -103,6 +103,7 @@ public class PenguWarmup {
 			}
 			return y / x;
 		}
+		return n;
 	}
 
 	public static long penguPowers(int x, int i) {
@@ -111,7 +112,7 @@ public class PenguWarmup {
 			return 1;
 		}
 		else {
-		int base = x;
+		long base = x;
 		for (int n = 1; n < i; n++) {
 			int x2 = x;
 			for (int k = 1; k < base; k++) {
@@ -119,9 +120,6 @@ public class PenguWarmup {
 			}
 		}
 		return x;
+		}
 	}
-	}
-
-
-
 }
