@@ -106,7 +106,7 @@ public class PenguWarmup {
 		return n;
 	}
 
-	public static long penguPowers(int x, int i) {
+	public static long penguPowers(long x, long i) {
 		// TODO
 		if (i == 0) {
 			return 1;
@@ -114,7 +114,7 @@ public class PenguWarmup {
 		else {
 		long base = x;
 		for (int n = 1; n < i; n++) {
-			int x2 = x;
+			long x2 = x;
 			for (int k = 1; k < base; k++) {
 				x = x + x2;
 			}
